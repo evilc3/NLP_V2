@@ -10,10 +10,9 @@ The structure of this repo:
 There are basically five main folders.
 
 1. <b>Visualization</b> : This folder is ment to contain all the stuff which is required to visualize text data. As text data is different from     tabular data we cannot use the same visualization methods to get insights of out data. Aside from visualization this also includes extracting meta-features like word_len,number of tokens ect. Which may or may not be useful but gives us insights about the data.  
-t 
 
-<!-- images -->
 
+![alt text]()
 
 2. <b>Preprocessing</b> : From the name one might guess this folder contains different preprocessing steps. This also includes preprocessing steps needed to increase the word coverage when using pre-trained enbeddings. Things like replacing digits greater than 9 with #'s, handling contractiong etc. 
 I am also working on a more general notebook which contains all the preprocessing steps regardless the dataset being used.
