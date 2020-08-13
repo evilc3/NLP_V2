@@ -1,0 +1,10 @@
+ENsembly methods to creating word embeddings 
+
+1. concatenation (conc) : naive approach 
+
+2. 1toN and 1toN+ : uses the linear model for training 
+
+3. DME: Dynamic meta-embedding, Uses models for learning embeddings 
+
+
+4. CDMEL similar to DME
