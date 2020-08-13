@@ -1,6 +1,5 @@
-<h1> NLP_V2 </h2>
+# NLP_V2
 
-<pre>
 
 This repository contains all important stuff I have learned , implemented  and I find useful for nlp. I want to make this repo. as a go to place to find 
 all the nlp stuff when I need hence this repo will always be a work in progress as learning never stops.
@@ -125,5 +124,3 @@ There are reasearch papers which help in understanding why this mechanisms work.
 
 A new notebook comparing the different attention's is in porcess.
 
-
-</pre>
