@@ -20,6 +20,112 @@ I am also working on a more general notebook which contains all the preprocessin
 
 
 
+
+<code>
+
+
+    for key in tqdm(vocab.keys()):
+
+        word = key
+
+        embedding_vector = embeddings_index.get(word)
+        #checking if word is present.
+        if embedding_vector is not None:
+#             embedding_matrix[word_dict[key]] = embedding_vector
+            known_words += 1
+            continue
+
+        #check if lower case of the word is present.
+        word = key.lower()
+        embedding_vector = embeddings_index.get(word)
+        if embedding_vector is not None:
+#             embedding_matrix[word_dict[key]] = embedding_vector
+            known_words += 1
+            continue
+
+        #cheking if the upper case of the word is present.
+        word = key.upper()
+        embedding_vector = embeddings_index.get(word)
+        if embedding_vector is not None:
+#             embedding_matrix[word_dict[key]] = embedding_vector
+            known_words += 1
+            continue
+
+        #checking if capital word is present.
+        word = key.capitalize()
+        embedding_vector = embeddings_index.get(word)
+        if embedding_vector is not None:
+#             embedding_matrix[word_dict[key]] = embedding_vector
+            known_words += 1
+            continue
+
+        '''
+        Three steppers are  used 
+
+        ps -> PorterStemmer 
+        ls -> lancaster 
+        sb->snowball stemmer 
+
+        need to check on this as well
+
+        
+        '''    
+
+        word = ps.stem(key)
+        embedding_vector = embeddings_index.get(word)
+        if embedding_vector is not None:
+#             embedding_matrix[word_dict[key]] = embedding_vector
+            stem.append(word)
+            known_words += 1
+            continue
+
+
+        word = lc.stem(key)
+        embedding_vector = embeddings_index.get(word)
+        if embedding_vector is not None:
+#             embedding_matrix[word_dict[key]] = embedding_vector
+            stem.append(word)
+            known_words += 1
+            continue
+
+
+        word = sb.stem(key)
+        embedding_vector = embeddings_index.get(word)
+        if embedding_vector is not None:
+#             embedding_matrix[word_dict[key]] = embedding_vector
+            stem.append(word)
+            known_words += 1
+            
+            continue
+
+        '''
+        Using Lemmatization
+        
+        '''    
+
+        word = wnl.lemmatize(key,'v')
+        embedding_vector = embeddings_index.get(word)
+        if embedding_vector is not None:
+#             embedding_matrix[word_dict[key]] = embedding_vector
+            lemma.append(key)
+            known_words += 1
+            continue
+
+        ''''
+        Checking for spellling mistakes 
+        
+        '''    
+        if len(key) > 1:
+            word = correction(key)
+            embedding_vector = embeddings_index.get(word)
+            if embedding_vector is not None:
+#                 embedding_matrix[word_dict[key]] = embedding_vector
+                correct.append(word)
+                known_words += 1
+                continue
+
+                
+</code>
 3. <b>Embedding</b> : This folder includes the meta-embeddings. In this we try to combine more than one embeddings eg concatenating word2vec and glove embedings.The different methods covered here are meta-embedding by 
 1. Taking the average 
 2. Concatenation
