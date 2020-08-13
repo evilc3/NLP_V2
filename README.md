@@ -18,7 +18,7 @@ t
 2. <b>Preprocessing</b> : From the name one might guess this folder contains different preprocessing steps. This also includes preprocessing steps needed to increase the word coverage when using pre-trained enbeddings. Things like replacing digits greater than 9 with #'s, handling contractiong etc. 
 I am also working on a more general notebook which contains all the preprocessing steps regardless the dataset being used.
 
-<!-- images --  show how the coverage was increased from initial       >
+
 
 3. <b>Embedding</b> : This folder includes the meta-embeddings. In this we try to combine more than one embeddings eg concatenating word2vec and glove embedings.The different methods covered here are meta-embedding by 
 1. Taking the average 
@@ -32,7 +32,6 @@ This folder also includes research papers on different Embedding Methods.
 
 BinaryProbelms: Includes notebooks for handling sementic analysis problems. It also includes differnt model architectures used to solve the probelm
 
-<!-- images -->
 
 Multi-Label : In this notebook I have solved two problems 
 1. stackoverflow tag prediction : Where the input is the question and title and the model needs to predict tags.
