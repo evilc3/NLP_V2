@@ -102,6 +102,7 @@ This folder includes the meta-embeddings. In this we try to combine more than on
 This folder also includes research papers on different Embedding Methods.
 
 ![alt text](https://github.com/evilc3/NLP_V2/blob/master/images/image5.png)
+
 Image of PME block
 
 
@@ -138,7 +139,7 @@ There are reasearch papers which help in understanding why this mechanisms work.
 A new notebook comparing the different attention's is in porcess, will be added shortly 
 
 
-#### Transformer Methods.
+#### Transformer Methods. (work in progress...)
 
 
 
