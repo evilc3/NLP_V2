@@ -7,7 +7,7 @@ all the nlp stuff when I need hence this repo will always be a work in progress 
 
 The structure of this repo:
 
-There are basically four main folders.
+There are basically five main folders.
 
 1. <b>Visualization</b> : This folder is ment to contain all the stuff which is required to visualize text data. As text data is different from     tabular data we cannot use the same visualization methods to get insights of out data. Aside from visualization this also includes extracting meta-features like word_len,number of tokens ect. Which may or may not be useful but gives us insights about the data.  
 t 
@@ -15,13 +15,12 @@ t
 <!-- images -->
 
 
-2. Preprocessing : From the name one might guess this folder contains different preprocessing steps. This also includes preprocessing steps needed to 
-increase the word coverage when using pre-trained enbeddings. Things like replacing digits greater than 9 with #'s, handling contractiong etc. 
+2. <b>Preprocessing</b> : From the name one might guess this folder contains different preprocessing steps. This also includes preprocessing steps needed to increase the word coverage when using pre-trained enbeddings. Things like replacing digits greater than 9 with #'s, handling contractiong etc. 
 I am also working on a more general notebook which contains all the preprocessing steps regardless the dataset being used.
 
 <!-- images --  show how the coverage was increased from initial       >
 
-3. Embedding : This folder includes the meta-embeddings. In this we try to combine more than one embeddings eg concatenating word2vec and glove embedings.The different methods covered here are meta-embedding by 
+3. <b>Embedding</b> : This folder includes the meta-embeddings. In this we try to combine more than one embeddings eg concatenating word2vec and glove embedings.The different methods covered here are meta-embedding by 
 1. Taking the average 
 2. Concatenation
 3. DME
@@ -29,7 +28,7 @@ I am also working on a more general notebook which contains all the preprocessin
 
 This folder also includes research papers on different Embedding Methods.
 
-4.Problems : This folder is made of 2 seperate folder BinaryProbelms, Multi-Label Problems 
+4.<b>Problems</b>: This folder is made of 2 seperate folder BinaryProbelms, Multi-Label Problems 
 
 BinaryProbelms: Includes notebooks for handling sementic analysis problems. It also includes differnt model architectures used to solve the probelm
 
@@ -41,7 +40,7 @@ Multi-Label : In this notebook I have solved two problems
 
 In this section I have made use of ml model like logistic regression with OneVsRestClassifier as thses models can hangle multi-label data. The reason for doing this is that my final year project was based on a similar mult-label problem where in I had to develope a model which could be deployed on a server as a result both the compute power and memory needed for re-training the model is limited hence the use of ml models instead of resource intensive LSTMs,also the size of the dataset was small as this was a piolit project the company who had give us the project.
 
-5. Attention: Attention has become an very important part of NLP.The reason why most of the advancements in the field (ImageNet moment). The purpose of this folder is to house all the different attentions architectures. The attention mechanisms included in the folder are 
+5. <b>Attention</b>: Attention has become an very important part of NLP.The reason why most of the advancements in the field (ImageNet moment). The purpose of this folder is to house all the different attentions architectures. The attention mechanisms included in the folder are 
 
 1. Simple Attention : 
 2. Self Attention 
@@ -49,6 +48,8 @@ In this section I have made use of ml model like logistic regression with OneVsR
 4. Additive Attention 
 5. Scaled Dot Product Attentoon
 6. MultiHeadAttention.
+There are reasearch papers which help in understanding why this mechanisms work.
+
 
 A new notebook comparing the different attention's is in porcess.
 
